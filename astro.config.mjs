@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://noswaldev.github.io',
-	base: '/starlighttest',
+	base: '', //set this if site not served from root. Otherwise, repo name must be prefixed to all page links
 	integrations: [
 		starlight({
 			title: 'My Docs',
