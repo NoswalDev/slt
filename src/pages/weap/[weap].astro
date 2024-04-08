@@ -1,0 +1,23 @@
+---
+export function getStaticPaths() {
+    return [
+    {params: {weap: 'bow'}},
+    {params: {weap: 'charge_blade'}},
+    {params: {weap: 'dual_blades'}},
+    {params: {weap: 'greatsword'}},
+    {params: {weap: 'gunlance'}},
+    {params: {weap: 'hammer'}},
+    {params: {weap: 'heavy_bowgun'}},
+    {params: {weap: 'hunting_horn'}},
+    {params: {weap: 'insect_glaive'}},
+    {params: {weap: 'lance'}},
+    {params: {weap: 'light_bowgun'}},
+    {params: {weap: 'longsword'}},
+    {params: {weap: 'switch_axe'}},
+    {params: {weap: 'sword_and_shield'}},
+    ];
+  }
+  
+  const { weap } = Astro.params;
+  ---
+  <div>Thats a nice {weap}!</div>
