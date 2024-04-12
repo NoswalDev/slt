@@ -28,18 +28,43 @@ export default defineConfig({
 			// 	YouTube: './src/components/yt_embed/YouTube.astro',
 			// },
 			sidebar: [ //sitemap. Left side. Autogenerate also autosorts by alphabet.
-				// {
-				// 	label: 'Guides',
-				// 	items: [
-				// 		// Each item here is one entry in the navigation menu.
-				// 		{ label: 'Example Guide', link: '/slt/guides/example/' },
-				// 	],
-				// },
 				{
-					label: 'Documents',
-					autogenerate: { directory: 'docs' },
-					badge: { text: 'BETA', variant: 'caution' },
+					label: 'Site Index',
+					items: [
+						{
+							label: 'Home',
+							link: '/slt/index/',
+						},
+						{
+							label: 'About Us',
+							link: '/slt/aboutus',
+						}
+					],
 				},
+				{
+					label: 'Rise Sunbreak',
+					autogenerate: { directory: 'rise' },
+					badge: { text: 'BETA', variant: 'caution' },
+					collapsed: true,
+				},
+				{
+					label: 'World Iceborne',
+					autogenerate: { directory: 'world' },
+					badge: { text: 'BETA', variant: 'caution' },
+					collapsed: true,
+				},
+				{
+					label: 'Wilds',
+					autogenerate: { directory: 'wilds' },
+					badge: { text: 'BETA', variant: 'caution' },
+					collapsed: true,
+				},
+				{
+					label: 'TestDir',
+					autogenerate: { directory: 'testdir' },
+					badge: { text: 'BETA', variant: 'caution' },
+					collapsed: true,
+				}
 			],
 		}),
 		embeds()
