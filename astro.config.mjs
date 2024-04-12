@@ -37,7 +37,8 @@ export default defineConfig({
 				// },
 				{
 					label: 'Documents',
-					autogenerate: { directory: 'tests' },
+					autogenerate: { directory: 'docs' },
+					badge: { text: 'BETA', variant: 'caution' },
 				},
 			],
 		}),
