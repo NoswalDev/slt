@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="wiggler.pet" content="Monster Hunter Weapon Guides, Monster Hunter Meta Sets, Made and curated by Speedrunners and Theorycrafters">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<!-- <link rel="stylesheet" media="screen and (max-width: 850px)" type="text/css" href="index_small.css" /> -->
+<!-- <link rel="stylesheet" media="screen and (min-width: 851px)" type="text/css" href="index.css" /> -->
+
+
+<head>
+    <link rel="shortcut icon" href="Sitewide_Images/wigglis.ico">
+    <title>Wiggler.pet</title>
+    <top-panel></top-panel>
+    <burger-menu></burger-menu>
+
+</head>
+<body>
+      
+
+
+    <h1>Home</h1>
+
+    <h2>Welcome to the Wiggler Garden! Please select a Monster Hunter entry below.</h2>
+
+    
+    <div class="content">
+        <a href="wilds\wilds.html"><img class="IndexImg"
+                src="https://www.monsterhunter.com/wilds/assets/img/mainVisual/all.png"></a>
+        <a href="rise\rise.html"><img class="IndexImg"
+                src="https://www.monsterhunter.com/rise-sunbreak/assets/img/logo-sb-global.png"></a>
+        <a href="world/world.html"><img class="IndexImg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntkhwUrRiN07VqfMJ4iBC27YDCkVzOJXRwg&usqp=CAU"></a>
+        <a href="other/other.html"><img class="IndexImg"
+                src="https://i.pinimg.com/736x/45/15/1e/45151e4bf354a5feecaab2221e4f1050.jpg"></a><br>
+             
+    </div>
+    <h2>How to use this Website:</h2>
+        <p><img src="Sitewide_Images/map.webp" class="explainImg"> - This is a Burger Menu for navigation. <br>
+        <img src="Sitewide_Images/Wigglis.webp" class="explainImg"> - The "About Us" page. <br>
+        <img src="Sitewide_Images/binoculars.webp" class="explainImg"> - The "Other Guides" page. <br>
+        <img src="Sitewide_Images/Farcaster.webp" class="explainImg"> - Return to Main page.<br>
+        All Games and Weaponicons have collapsible sub-menus.
+        
+        </p>
+</body>
+<footer>
+<footer-bar></footer-bar>
+
+
+</footer>
+<!-- <script src="footer-bar_top_level.js" type="text/javascript" defer></script> -->
+<!--<script src="static_site_layout_top_level.js" type="text/javascript" defer></script>-->
+<!-- <script src="burger-menu_top_level.js" type="text/javascript" defer></script> -->
+
+</html>
