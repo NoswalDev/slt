@@ -27,8 +27,8 @@ export default defineConfig({
 			disable404Route: true, //override default starlight 404
 			customCss: [
 				'./src/styles/global.css',
-				'./src/styles/global_small.css'
-			]
+				'./src/styles/global_small.css',
+			],
 		}),
 	],
 });
