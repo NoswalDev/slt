@@ -24,6 +24,7 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},
 			],
+			disable404Route: true,
 		}),
 	],
 });
