@@ -1,0 +1,442 @@
+head {
+  overflow-x: hidden;
+  width: 100%;
+  height: 10vh;
+  background-repeat: no-repeat;
+  padding: none;
+  top: 8vh;
+  left: 0;}
+  @font-face {
+    font-family: 'Didact Gothic';/*taken from here - https://github.com/ossobuffo/didact-gothic under the license here - http://scripts.sil.org/OFL */
+    src: url(DidactGothic-Regular.otf);}
+.IndexImg {
+  width: 30vw;
+  padding: 2vw;
+  margin: 2vw;
+ border: 4px solid #00000021;}
+.explainImg {width: 4vw;}
+body {
+  color: #f3f3f3;
+  background-color: #333333;
+  font-family: 'Didact Gothic';
+  font-size: clamp(12px, 2vw, 20px);
+  text-align: center;
+  margin-top: 10%;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;}
+@keyframes fadeInOpacity {
+  0% {opacity: 0;}
+  100% {opacity: 1;}}
+summary::-webkit-details-marker {display: none}
+details summary {cursor: pointer;}
+input[type='checkbox'] {display: none;}
+.WeaponIcon {max-height: 4.7vh; max-width: 4.7vh;}
+.aboutus {
+  font-size: 3rem;
+  padding: 10vw 10vh;
+  color: #f3f3f3;
+  text-align: center;}
+.wigglis {
+  padding: 6vw 6vh;
+  max-width: 30vw;
+  max-height: 30vh;}
+.collapsible-contentParagraphs {
+  max-height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s;
+  color: #f3f3f3;}
+.CollHeader {
+  text-decoration: underline;
+  font-size: 14pt;
+  text-align: center;
+  width: 80vw;
+  color: #f3f3f3;
+  margin-left: 10vw;
+  cursor: pointer;
+  transition: 0.3s ease-in;}
+.CollHeader::before {content: ' ';}
+.toggle:checked+.CollHeader+.collapsible-contentParagraphs {max-height: 1000vh;}
+.CollHeader-contentParagraphs {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.2s;
+  background-color: rgb(92, 90, 90);
+  color: #f3f3f3;}
+.BuildCard, .TableScreenshot {padding: 1vw; max-width: 100%;}
+.ParagraphText {text-align: left;}
+.collapsible-contentLinks {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.2s;
+  max-width: 100vw;
+  color: #f3f3f3;}
+.LinksHeader {
+  text-decoration: underline;
+  font-size: 14pt;
+  text-align: center;
+  color: #f3f3f3;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  max-width: 10vw;
+  background-color: #313030;}
+.LinksHeader::before {
+  content: ' ';}
+.toggle:checked+.LinksHeader+.collapsible-contentLinks {
+  max-height: 1000vh;
+  max-width: 80vw;}
+.LinksHeader-contentLinks {
+  max-height: 0px;
+  text-align: center;
+  transition: 0.2s;
+  color: #333232;}
+.SetLinksContainer{
+  clear:both;}
+.BuildParagraph {
+  margin-left: 10vw;
+  margin-right: 10vw;}
+.switchskilltable, .rawtable, .eletable {display: none;}
+.rawtableMobile, .eletableMobile, .skillpriotable {
+  table-layout: auto;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;}
+.rawtableMobile thead th:nth-child(n), .eletableMobile thead th:nth-child(n), .skillpriotable thead th:nth-child(n) {border: 2px solid #6464646c; background: linear-gradient(180deg, #464646, #202020, #222222, #101010, #464646);}
+.rawtableMobile thead th:nth-child(1), .eletableMobile thead th:nth-child(1), .skillpriotable thead th:nth-child(1) {background-color: #ffffff00; width: 40px; display:hidden;}
+.skillpriotable thead th:nth-child(3){width:60%;}
+.rawtableMobile tfoot th, .eletableMobile tfoot th, .skillpriotable tfoot th {border:none;}
+.rawtableMobile td, .eletableMobile td, .skillpriotable td {padding: 5px; border: 2px solid #ffffff8f;}
+.rawtableMobile tbody tr, .eletableMobile tbody tr, .skillpriotable tbody tr {border: 2px solid #ffffff8e; text-shadow: 2px 2px 2px rgb(0, 0, 0);}
+.rawtableMobile tbody tr:nth-child(odd), .skillpriotable tr:nth-child(odd) {background-color: #3d3d3d;}
+.rawtableMobile tbody tr:nth-child(even), .skillpriotable tr:nth-child(even) {background-color: #757575;}
+.eletableMobile tbody tr:nth-child(1) {background-color: #f3171783;}
+.eletableMobile tbody tr:nth-child(2) {background-color: #290b9483;}
+.eletableMobile tbody tr:nth-child(3) {background-color: #8a8a0b83;}
+.eletableMobile tbody tr:nth-child(4) {background-color: #215c5c83;}
+.eletableMobile tbody tr:nth-child(5) {background-color: #48096d83;}
+.inlineimg {width: 5vw;}
+.EleStatusImg {width: 8vw; height: 8vw; max-width: 40px; max-height: 40px;}
+.best {background-color: #3e9249;}
+.good {background-color: #76a063;}
+.bad {background-color: #9e4949;}
+.redscroll {color: #ff0000;}
+.bluescroll {color: #7777fa;}
+.tooltip {
+  position: relative;
+  display: inline-block;}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background: linear-gradient(50deg, #423800, #000000, #000000, #000000, #4d4e00);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 5px;
+    border: solid;
+    border-color:#757717;
+    position: absolute;
+    bottom: 4vh;
+    left: 0;}
+.tooltip:hover .tooltiptext {visibility: visible;animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation: flicker 10s infinite;
+border-bottom: 2px solid black;}
+/*yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
+.tooltiptext:before, .tooltiptext:after {
+    content: '';}
+@keyframes steam {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}}
+/*yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
+.CollL2Page {text-align: center;}
+::-webkit-scrollbar {display: none;}
+.sidebarbutton {
+    text-decoration: underline;
+    text-align: center;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index: 10;
+    height: 10vh;
+    width: 10vw;}
+.sidebarbutton::before {display: hidden;}
+.toggle:checked+.sidebarbutton+.collapsible-contentSidebar {
+    max-height: 100vh;
+    max-width: 100vw;
+    top:0;
+    transform: translateX(-150%);}  
+.collapsible-contentSidebar {
+    top:0;
+    overflow:scroll;
+    text-align: center;
+    transition: 0.2s;
+    height: 100vh;
+    color: #f3f3f3;
+    position: fixed;
+    background-color: rgb(32, 47, 51);
+    border: 2px solid white;
+    border-radius: 3%;
+    z-index: 5;}  
+.burger {width: 10vh; height: 10vh;}
+.collapsible-contentSidebar1 {
+    max-height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.2s;
+    background-color: rgb(32, 47, 51);
+    z-index: -20;
+    color: #f3f3f3;
+    width: 100%;}
+.toggle:checked+.collapsibleSidebar+.collapsible-contentSidebar1 {
+    max-height: 150vh;
+    max-width: 100%;
+    margin: 0 auto;}
+.collapsibleSidebar {
+    text-decoration: underline;
+    text-align: center;
+    color: #f3f3f3;
+    cursor: pointer;
+    width: 80vw;
+    transition: 0.5s ease-in;
+    height: 100vh;}
+.sidebar {width: 80vw;}
+.MainPagesBurger {font-size: 1.7rem;}
+.collapsible-contentSidebar1 a:link, a:visited {
+    color: #f3f3f3;
+    padding-left:1vw ;
+    padding-right: 1vw;
+    border-style: dashed;
+    background-color: #333333;
+    max-width: 728px;
+    text-align: center;
+    font-size: 1.2rem;}
+.collapsible-contentSidebar1 a:active {
+    color: #444;
+    border: 2px green;
+    background-color: #444;
+    font-size: 1.2rem;}
+.Side_Img {
+    width: 25vw;
+    height: 25vw;}
+.collapsible-contentToC {
+    overflow: hidden;
+    text-align: center;
+    transition: 0.2s;
+    color: #f3f3f3;}
+.ToCHeader {
+    text-decoration: underline;
+    text-align: center;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 6vw;
+    width: 6vw; min-width: 60px; min-height: 60px;}
+.ToCHeader::before {display: hidden;}
+.toggle:checked+.ToCHeader+.collapsible-contentToC {
+    max-height: 100vh;
+    transform: translateY(-100%);}
+.CollToc {
+    left: 0;
+    top: 0;
+    width: 61vw; min-width: 255px;
+    position:fixed;
+    margin-left: 60px;
+    height: 1vh;
+    z-index: 2;}
+.ToCHeader-contentToC {
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: rgb(92, 90, 90);
+    color: #f3f3f3;}
+.Toc_Img {width: 6vw; height: 6vw; min-width: 60px; min-height: 60px;}
+.ColledToc {
+    left: 0;
+    width: 60vw; min-width: 250px;
+    border: 2px solid gold;
+    background: linear-gradient(60deg, rgba(92, 92, 92, 0.95), rgb(84, 2, 117, 0.95));}
+.ColledToc a:link, a:visited {
+    color: #f3f3f3;
+    padding-left:1vw ;
+    padding-right: 1vw;
+    border-style: dashed;
+    border-color: #464646;
+    text-align: center;
+    max-width: 728px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: linear-gradient(60deg, rgba(36, 2, 70, 0.993), rgb(0, 0, 0));}
+#endgame, #prog, #guide {display: none;}
+#endgame, .endgameButton {
+    background: linear-gradient(200deg, rgba(189, 65, 73, 0.699), rgba(255, 211, 99, 0.705) );
+    width: 40vw;
+    margin: auto;
+    outline: 2px solid gray;}
+#prog, .progButton {
+    background: linear-gradient(20deg, rgb(140, 174, 90), rgb(103, 100, 215) );
+    width: 40vw;
+    margin: auto;
+    outline: 2px solid gray;}
+#guide, .guideButton {
+    background-image: linear-gradient(to right top, #000000, #31262f, #514b66, #5979a3, #43add8, #33b3d3, #2eb8cb, #37bcc1, #399295, #356b6c, #2c4546, #202323);
+    width: 40vw;
+    margin: auto;
+    outline: 2px solid gray;}
+input[id="showendgame"]:checked ~ #endgame,
+input[id="showprog"]:checked ~ #prog,
+input[id="showguide"]:checked ~ #guide {
+    display: block;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;}
+input[id="showendgame"]:checked ~ .radiotext1,
+input[id="showguide"]:checked ~ .radiotext2,
+input[id="showprog"]:checked ~ .radiotext3 {
+    border: 4px solid;
+    animation: flicker 4s infinite;
+    background-color: #000000;}
+@keyframes flicker {
+    0% {border-color: rgba(179, 252, 255, 0.3);
+    border-bottom-color: white;}
+    50% {border-color: rgba(179, 252, 255, 1);
+    border-bottom-color:white;}
+    100% {border-color: rgba(179, 252, 255, 0.3);
+    border-bottom-color: white;}}
+.radiobutton {display: none;}
+.radiotext1, .radiotext2, .radiotext3 {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 4vw;
+    height: 2vh;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: #333333;}
+.Level2Paragraph {
+    text-align: left;}
+.Patchnotes {width: 50vw;}
+.spaceholder {visibility: hidden; width: 1px; height: 10vh;}
+h2 {font-size: 3rem; text-shadow: 2px  1px 2px red, 0 0 1em blue, 0 0 0.2em blue;}
+.gamememe {
+  width: 85vw;
+  z-index: -1;}
+.GuideParagraph {
+  margin-left: 10vw;
+  margin-right: 10vw;}
+.GuideParagraphText {
+  text-align: center;}
+.GuideCard, .GuideCardMobile {
+  max-width: 100%;
+  padding: 1vw;}
+.GuideImg {width: 65vw; z-index: -1;}
+/*complete yt lite embed yoinked from: https://github.com/paulirish/lite-youtube-embed*/
+lite-youtube {
+  background-color: #000;
+  position: relative;
+  display: block;
+  contain: content;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  max-width: 720px;}
+lite-youtube::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  top: 0;
+  /* Pixel-perfect port of YT's gradient PNG, using https://github.com/bluesmoon/pngtocss plus optimizations */
+  background-image: linear-gradient(180deg, rgb(0 0 0 / 67%) 0%, rgb(0 0 0 / 54%) 14%, rgb(0 0 0 / 15%) 54%, rgb(0 0 0 / 5%) 72%, rgb(0 0 0 / 0%) 94%);
+  height: 99px;
+  width: 100%;
+  font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+  color: hsl(0deg 0% 93.33%);
+  text-shadow: 0 0 2px rgba(0,0,0,.5);
+  font-size: 18px;
+  padding: 25px 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;}
+lite-youtube:hover::before {
+  color: white;}
+/* responsive iframe with a 16:9 aspect ratio thanks https://css-tricks.com/responsive-iframes/ */
+lite-youtube::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% / (16 / 9));}
+lite-youtube > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;}
+lite-youtube > .lty-playbtn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/68px 48px;
+  background-image: url('images/yt_button.webp');
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  filter: grayscale(100%);
+  transition: filter .1s cubic-bezier(0, 0, 0.2, 1);
+  border: 0;}
+lite-youtube:hover > .lty-playbtn,
+lite-youtube .lty-playbtn:focus {
+  filter: none;}
+lite-youtube.lyt-activated {cursor: unset;}
+lite-youtube.lyt-activated::before,
+lite-youtube.lyt-activated > .lty-playbtn {
+  opacity: 0;
+  pointer-events: none;}
+.lyt-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;}
+/*complete yt lite embed yoinked from: https://github.com/paulirish/lite-youtube-embed*/
+.PeopleImg {width: 7vw;}
+.PeopleTable {
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+width: 80vw;}
+.PeopleTable tbody tr, .PeopleTableSmall tbody tr {
+text-shadow: 3px 3px 3px rgb(0, 0, 0);}
+.PeopleTableSmall {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 50vw;}
+.SmallImg {width: 3vw;}
+.L2Container {text-align: center; display: block; width: 70vw; margin: auto;}
+.l2guideimg {width: 70vw;}
+.RiseMeme {background-image: url(images/AmazonPrimordialDarkVest.webp); background-repeat: no-repeat; background-size: 100vw;}
+.WorldMeme {background-image: url(images/slap_roof_of_fatty.webp); background-repeat: no-repeat; background-size: 100vw;}
+.endgameButton, .guideButton, .progButton {width: 34vw; display: inline-block; text-align: center; border: 4px solid rgba(231, 231, 231, 0.158); margin-left: 3vw; margin-right: 3vw; animation: flicker 5s infinite;}
+.endgameButton p, .guideButton p, .progButton p {margin-top: 0 auto; margin-bottom: 0 auto; font-size: clamp(1rem, 1.5 rem, 2rem); text-shadow: 3px 3px 3px rgb(34, 34, 34); ;}
+.endgameButton img, .guideButton img, .progButton img {width: 5vw; min-width: 50px;}
+li {list-style-type: none;}
+footer a:link {color: #f3f3f3;}
+.ImgButton {background: linear-gradient(45deg, #0000003d, #2727273d, rgba(0, 0, 0, 0.24)00, #4646462a,#00000060); border: outset 5px rgba(206, 204, 204, 0.5); min-width: 150px; display: inline-block; min-height: 20px; height: 3vw; width: 20vw; margin-top: 10px; margin-bottom: 10px;}
+a:link:visited {color: #f3f3f3;} a:link {color: #f3f3f3;}

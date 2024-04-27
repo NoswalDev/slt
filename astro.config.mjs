@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://noswaldev.github.io',
-  	base: '/slt',
+  	// base: '/slt', //temporarily commented out to run on dev server
 	integrations: [
 		starlight({
 			title: 'My Docs',
@@ -24,7 +24,11 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},
 			],
-			disable404Route: true,
+			disable404Route: true, //override default starlight 404
+			customCss: [
+				'./src/styles/global.css',
+				'./src/styles/global_small.css'
+			]
 		}),
 	],
 });
