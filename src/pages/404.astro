@@ -1,26 +1,21 @@
+---
+import Footer_Bar from '@components/Footer_Bar.astro';
+import Burger_Menu from '@components/Burger_Menu.astro';
+import Header_Common from '@components/Header_Common.astro';
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; script-src 'self'; frame-src 'none'"> -->
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<link rel="stylesheet" media="screen and (max-width: 850px)" type="text/css" href="../src/styles/global_small.css" />
-<link rel="stylesheet" media="screen and (min-width: 851px)" type="text/css" href="../src/styles/global.css" />
-<link rel="shortcut icon" href="../src/assets/icons/wigglis.webp">
+<Header_Common />
 <title>Oops :(</title>
 </head>
 <body>
-<burger-menu></burger-menu>
+<Burger_Menu />
 <h2>Oops!</h2>
 Whatever you were trying to reach was either moved, carted on the way or never loaded into the quest in the first place.<br>
 Please join our discord and let the main team know about it!<br>
 We apologize for the inconvenience and hope to fix the issue as soon as we find it!
-</body>
 
-<footer>
-<footer-bar></footer-bar>
-<script src="../src/scripts/footer-bar.js" type="text/javascript" defer></script>
-<script src="../src/scripts/burger-menu.js" type="text/javascript" defer></script>
-</footer>
+<Footer_Bar />
+</body>
 </html>

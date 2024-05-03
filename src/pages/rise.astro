@@ -1,0 +1,47 @@
+---
+import Footer_Bar from '@components/Footer_Bar.astro';
+import Burger_Menu from '@components/Burger_Menu.astro';
+import Header_Common from '@components/Header_Common.astro';
+
+import Guide_Selector from '@components/Guide_Selector.astro';
+import Patch_Notes from '@components/Patch_Notes_Rise.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Header_Common />
+    <meta name="keywords" content="MHR, MHRSB, MHR:SB, Monster Hunter, Rise, Sunbreak, Guides, Meta, Endgame, Progression, How to">
+    <title>Rise/Sunbreak</title>
+    <meta property="og:url" content="https://www.Wiggler.pet/rise" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Im-terribly-bad-at-names/justsomestuffineedforotherstuff/main/rise/gamememe.webp">
+    <meta property="description" content="Guides for Monster Hunter Rise, written and curated by Theorycrafters, Speedrunners and you!">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rise/Sunbreak" />
+    <meta property="og:description" content="Monster Hunter Guides, written and curated by Theorycrafters, Speedrunners and you!" />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large">
+</head>
+
+<body class="RiseMeme"> <div class="spaceholder"></div>
+    <Burger_Menu />
+    <h2> Monster Hunter Rise Sunbreak</h2>
+    <Guide_Selector />
+
+  <br>
+  <h3>Patchnotes - Rise and Sunbreak:</h3>
+  <Patch_Notes />
+                                               
+  <br> <h3>Other Guides:</h3>
+  <div class="BuildParagraph">
+      <a href="other"><img src="../src/assets/icons/binoculars.webp" class="Patchnotes"></a>
+  </div>
+  
+</body>
+
+<footer>
+    <Footer_Bar />
+    <br><a href="../src/assets/headers/AmazonPrimordialDarkVest.webp" target="_blank"><img src="../src/assets/headers/AmazonPrimordialDarkVest.webp" class="gamememe"></a>
+</footer>
+
+</html>

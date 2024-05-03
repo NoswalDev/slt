@@ -1,0 +1,129 @@
+---
+import Footer_Bar from '@components/Footer_Bar.astro';
+import Burger_Menu from '@components/Burger_Menu.astro';
+import Header_Common from '@components/Header_Common.astro';
+
+import Patch_Notes_Wilds from '@components/Patch_Notes_Wilds.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Header_Common />
+    <meta name="keywords" content="Wiggler, Monster Hunter, Wilds, Guides, Prog, Meta, Endgame, How to, MH">
+    <title>Wilds</title>
+    <meta property="og:url" content="https://www.wiggler.pet/wilds" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Im-terribly-bad-at-names/justsomestuffineedforotherstuff/main/wilds/gamememe.webp">
+    <meta property="description" content="Guides for Monster Hunter Wilds, written and curated by Theorycrafters, Speedrunners and you!">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wilds" />
+    <meta property="og:description" content="Guides for Monster Hunter Wilds, written and curated by Theorycrafters, Speedrunners and you!" />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large">
+</head>
+
+<body class="WildsMeme"><div class="spaceholder"></div>
+    <Burger_Menu />
+    <h2>Monster Hunter Wilds</h2>
+    <input type="radio" class="radiobutton" name="Level2RadioButton" id="showendgame"> <label for="showendgame" class="radiotext1">endgame Sets</label>
+    <input type="radio" class="radiobutton" name="Level2RadioButton" id="showguide" checked> <label for="showguide" class="radiotext2">How to play...</label>
+    <input type="radio" class="radiobutton" name="Level2RadioButton" id="showprog"> <label for="showprog" class="radiotext3">Progression Sets</label><br>
+    <div id="endgame">
+            <p> 
+              <a href="wilds/endgame/greatsword"><img src="../src/assets/weap_icons/greatsword.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/longsword"><img src="../src/assets/weap_icons/longsword.webp" class="inlineimg" /></a>
+              <a href="wilds/endgame/sword_and_shield"><img src="../src/assets/weap_icons/sword_and_shield.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/dual_blades"><img src="../src/assets/weap_icons/dual_blades.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/hammer"><img src="../src/assets/weap_icons/hammer.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/hunting_horn"><img src="../src/assets/weap_icons/hunting_horn.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/lance"><img src="../src/assets/weap_icons/lance.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/gunlance"><img src="../src/assets/weap_icons/gunlance.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/switch_axe"><img src="../src/assets/weap_icons/switch_axe.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/charge_blade"><img src="../src/assets/weap_icons/charge_blade.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/endgame/insect_glaive"><img src="../src/assets/weap_icons/insect_glaive.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/endgame/light_bowgun"><img src="../src/assets/weap_icons/light_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/heavy_bowgun"><img src="../src/assets/weap_icons/heavy_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/endgame/bow"><img src="../src/assets/weap_icons/bow.webp" class="inlineimg"></a>
+            </p>
+  
+          </div>
+     
+  
+    <div id="guide">
+            <p> 
+              <a href="wilds/guide/greatsword"><img src="../src/assets/weap_icons/greatsword.webp" class="inlineimg"></a>
+              <a href="wilds/guide/longsword"><img src="../src/assets/weap_icons/longsword.webp" class="inlineimg" /></a>
+              <a href="wilds/guide/sword_and_shield"><img src="../src/assets/weap_icons/sword_and_shield.webp" class="inlineimg"></a>
+              <a href="wilds/guide/dual_blades"><img src="../src/assets/weap_icons/dual_blades.webp" class="inlineimg"></a>
+              <a href="wilds/guide/hammer"><img src="../src/assets/weap_icons/hammer.webp" class="inlineimg"></a>
+              <a href="wilds/guide/hunting_horn"><img src="../src/assets/weap_icons/hunting_horn.webp" class="inlineimg"></a>
+              <a href="wilds/guide/lance"><img src="../src/assets/weap_icons/lance.webp" class="inlineimg"></a>
+              <a href="wilds/guide/gunlance"><img src="../src/assets/weap_icons/gunlance.webp" class="inlineimg"></a>
+              <a href="wilds/guide/switch_axe"><img src="../src/assets/weap_icons/switch_axe.webp" class="inlineimg"></a>
+              <a href="wilds/guide/charge_blade"><img src="../src/assets/weap_icons/charge_blade.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/guide/insect_glaive"><img src="../src/assets/weap_icons/insect_glaive.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/guide/light_bowgun"><img src="../src/assets/weap_icons/light_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/guide/heavy_bowgun"><img src="../src/assets/weap_icons/heavy_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/guide/bow"><img src="../src/assets/weap_icons/bow.webp" class="inlineimg"></a>
+            </p>
+  
+          </div>
+  
+          <div id="prog">
+  
+            <p> 
+              <a href="wilds/progression/greatsword"><img src="../src/assets/weap_icons/greatsword.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/longsword"><img src="../src/assets/weap_icons/longsword.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/sword_and_shield"><img src="../src/assets/weap_icons/sword_and_shield.webp" class="inlineimg"></a>
+              <a href="wilds/progression/dual_blades"><img src="../src/assets/weap_icons/dual_blades.webp" class="inlineimg"></a>
+              <a href="wilds/progression/hammer"><img src="../src/assets/weap_icons/hammer.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/hunting_horn"><img src="../src/assets/weap_icons/hunting_horn.webp" class="inlineimg"></a>
+              <a href="wilds/progression/lance"><img src="../src/assets/weap_icons/lance.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/gunlance"><img src="../src/assets/weap_icons/gunlance.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/switch_axe"><img src="../src/assets/weap_icons/switch_axe.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/charge_blade"><img src="../src/assets/weap_icons/charge_blade.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/insect_glaive"><img src="../src/assets/weap_icons/insect_glaive.webp"
+                  class="inlineimg"></a>
+              <a href="wilds/progression/light_bowgun"><img src="../src/assets/weap_icons/light_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/progression/heavy_bowgun"><img src="../src/assets/weap_icons/heavy_bowgun.webp" class="inlineimg"></a>
+              <a href="wilds/progression/bow"><img src="../src/assets/weap_icons/bow.webp" class="inlineimg"></a>
+            </p>
+    
+          </div>
+    
+  
+          <br> Patchnotes <br>
+          <Patch_Notes_Wilds />
+                                                       
+          <br>
+          <h3>Other Guides:</h3>
+        
+          <div class="BuildParagraph">
+              <h3><a href="other/other"><img src="../src/assets/icons/binoculars.webp"></a></h3>
+          </div>
+          
+                  
+                                                 
+                      
+                                      
+                                               
+                      
+   
+
+  <footer>
+    <Footer_Bar />
+
+  </footer>
+
+</html>

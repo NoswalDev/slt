@@ -1,0 +1,53 @@
+---
+import Footer_Bar from '@components/Footer_Bar.astro';
+import Burger_Menu from '@components/Burger_Menu.astro';
+import Header_Common from '@components/Header_Common.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Header_Common />
+    <title>Wiggler.pet</title>
+    <meta property="og:url" content="https://www.wiggler.pet" />
+    <meta property="og:image" content="../src/assets/icons/wigglis.webp">
+    <meta property="description" content="Monster Hunter Guides, written and curated by Theorycrafters, Speedrunners and you!">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wiggler.pet" />
+    <meta property="og:description" content="Monster Hunter Guides, written and curated by Theorycrafters, Speedrunners and you!" />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large">
+</head>
+
+<body class="RiseMeme">
+        <div class="spaceholder"></div>
+        <h1>Home</h1>
+        
+        <Burger_Menu />
+
+    <span class="tooltip"><h1><u>How to use: Click or Hover me!</u></h1><span class="tooltiptext">
+        <ul><li><img src="../src/assets/icons/map.webp" class="explainImg"> - This is a Burger Menu for navigation.</li>
+        <li><img src="../src/assets/icons/Wigglis.webp" class="explainImg"> - The "About Us" page.</li>
+        <li><img src="../src/assets/icons/binoculars.webp" class="explainImg"> - The "Other Guides" page.</li>
+        <li><img src="../src/assets/icons/farcaster.webp" class="explainImg"> - Return to Main page.</li><br>
+        All Games and Weapon Icons have collapsible sub-menus.</ul></span></span><br>
+        <h2>Welcome to the Wiggler Garden! Please select a Monster Hunter entry below.</h2> <br><br>
+    <div class="content">
+        <a href="wilds"><img class="IndexImg" src="../src/assets/logos/wilds_logo.webp"></a>
+        <a href="rise"><img class="IndexImg" src="../src/assets/logos/rise_logo.webp"></a>
+        <a href="world"><img class="IndexImg" src="../src/assets/logos/world_logo.webp"></a>
+        <a href="other"><img class="IndexImg" src="../src/assets/logos/other_guides_logo.webp"></a><br>
+             
+    </div>
+    <h2>How to use this Website:</h2>
+        <p><img src="../src/assets/icons/map.webp" class="explainImg"> - This is a Burger Menu for navigation. <br>
+        <img src="../src/assets/icons/Wigglis.webp" class="explainImg"> - The "About Us" page. <br>
+        <img src="../src/assets/icons/binoculars.webp" class="explainImg"> - The "Other Guides" page. <br>
+        <img src="../src/assets/icons/farcaster.webp" class="explainImg"> - Return to Main page.<br>
+        All Games and Weaponicons have collapsible sub-menus.
+        </p>
+</body>
+<footer>
+    <Footer_Bar />
+
+</footer>
+</html>

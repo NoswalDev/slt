@@ -1,55 +1,119 @@
-head {
-  overflow-x: hidden;
-  width: 100%;
-  height: 10vh;
-  background-repeat: no-repeat;
-  padding: none;
-  top: 8vh;
-  left: 0;}
-  @font-face {
-    font-family: 'Didact Gothic';/*taken from here - https://github.com/ossobuffo/didact-gothic under the license here - http://scripts.sil.org/OFL */
-    src: url(DidactGothic-Regular.otf);}
-.IndexImg {
-  width: 30vw;
-  padding: 2vw;
-  margin: 2vw;
- border: 4px solid #00000021;}
-.explainImg {width: 4vw;}
+@font-face {
+  font-family: "Didact Gothic"; /*taken from here - https://github.com/ossobuffo/didact-gothic under the license here - http://scripts.sil.org/OFL */
+  src: url(didact_gothic.woff2) format("woff2");
+}
+
 body {
   color: #f3f3f3;
   background-color: #333333;
-  font-family: 'Didact Gothic';
-  font-size: clamp(12px, 2vw, 20px);
-  text-align: center;
-  margin-top: 10%;
+  font-family: "Didact Gothic";
+  font-size: clamp(16px, 2vw, 22px);
+  text-align: left;
+  margin-top: 5%;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 1s;}
+  animation-duration: 1s;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+footer {
+  text-align: center;
+  margin-left: -2vw;
+  margin-right: -2vw;
+  margin-top: 10vw;
+}
+p {
+  text-align: left;
+}
+li {
+  list-style-type: none;
+  text-align: left;
+}
+h2 {
+  font-size: 1.9rem;
+  text-shadow: 2px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  text-align: center;
+}
+h3 {
+  background: linear-gradient(
+    45deg,
+    #0000003d,
+    #2727273d,
+    rgba(0, 0, 0, 0.24) 00,
+    #4646462a,
+    #00000060
+  );
+  border: outset 5px rgba(206, 204, 204, 0.5);
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+h1 {
+  font-size: 1.5rem;
+}
 @keyframes fadeInOpacity {
-  0% {opacity: 0;}
-  100% {opacity: 1;}}
-summary::-webkit-details-marker {display: none}
-details summary {cursor: pointer;}
-input[type='checkbox'] {display: none;}
-.WeaponIcon {max-height: 4.7vh; max-width: 4.7vh;}
-.aboutus {
-  font-size: 3rem;
-  padding: 10vw 10vh;
-  color: #f3f3f3;
-  text-align: center;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.IndexImg {
+  width: 30vw;
+  padding: 2vw;
+  margin: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #00000021;
+  border-radius: 5%;
+}
+.IndexImg:hover {
+  animation: flicker 2s infinite;
+}
+.IndexLogos {
+  width: 75vw;
+  margin: 0 auto;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.WeaponIcon {
+  width: 6vw;
+  height: 6vw;
+  min-width: 80px;
+  min-height: 80px;
+}
 .wigglis {
   padding: 6vw 6vh;
-  max-width: 30vw;
-  max-height: 30vh;}
-.collapsible-contentParagraphs {
+  width: 25vw;
+  height: 25vw;
+  max-width: 180px;
+  max-height: 180px;
+}
+.CollParagraph {
   max-height: 0px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   transition: 0.2s;
-  color: #f3f3f3;}
-.CollHeader {
+  color: #f3f3f3;
+}
+.CollHeading {
+  display: block;
+  width: 85vw;
+  text-align: center;
+  margin-left: 5vw;
+} /*text-decoration: underline; text-align: center; color: #f3f3f3; cursor: pointer; transition: 0.3s ease-in; display: inline-block; font-weight: bold; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; */
+/*.CollHeader {
   text-decoration: underline;
   font-size: 14pt;
   text-align: center;
@@ -57,291 +121,661 @@ input[type='checkbox'] {display: none;}
   color: #f3f3f3;
   margin-left: 10vw;
   cursor: pointer;
-  transition: 0.3s ease-in;}
-.CollHeader::before {content: ' ';}
-.toggle:checked+.CollHeader+.collapsible-contentParagraphs {max-height: 1000vh;}
-.CollHeader-contentParagraphs {
-  max-height: 0px;
-  overflow: hidden;
-  transition: 0.2s;
-  background-color: rgb(92, 90, 90);
-  color: #f3f3f3;}
-.BuildCard, .TableScreenshot {padding: 1vw; max-width: 100%;}
-.ParagraphText {text-align: left;}
+  transition: 0.3s ease-in;}*/
+/*.CollHeading::before {content: "\261E"; display: inline-block;}*/
+.CollHeading h3:before {
+  content: "\261E";
+  margin-right: 2px;
+}
+.toggle:checked ~ .CollHeading h3:before {
+  content: "\261F ";
+  display: block;
+}
+/*.toggle:checked ~ .CollHeading::before {content: "\261F"; display: block;}*/
+.toggle:checked ~ .CollParagraph {
+  max-height: 1000vh;
+}
+label {
+  cursor: pointer;
+}
+.explainImg {
+  width: 4vw;
+}
+.BuildCard,
+.TableScreenshot {
+  padding: 1vw;
+  max-width: 100%;
+}
+/*.BuildCard {float: left;
+  object-fit:scale-down;
+  max-width: 50vw;
+  padding: 1vw;}*/
 .collapsible-contentLinks {
   max-height: 0px;
   overflow: hidden;
   transition: 0.2s;
   max-width: 100vw;
-  color: #f3f3f3;}
-.LinksHeader {
-  text-decoration: underline;
-  font-size: 14pt;
+  color: #f3f3f3;
+}
+.SetLinksContainer {
+  clear: both;
+}
+a:link:visited {
+  color: #f3f3f3;
+}
+a:link {
+  color: #f3f3f3;
+}
+.rawtableMobile,
+.eletableMobile,
+.skillpriotable,
+.switchskilltable {
+  table-layout: auto;
+  text-align: center;
+  width: 100%;
+  margin-left: none;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+/*.rawtable thead th:nth-child(1), .eletable thead th:nth-child(1), .switchskilltable thead th:nth-child(1) {display:none;}
+.rawtable tbody th:nth-child(1), .eletable tbody th:nth-child(1), .switchskilltable tbody th:nth-child(1) {display: none;}*/
+.switchskilltable thead th:nth-child(1),
+.switchskilltable tbody th:nth-child(1) {
+  display: none;
+}
+.skillpriotable tbody td:nth-child(3) {
+  text-align: left;
+}
+.rawtableMobile thead th:nth-child(n),
+.eletableMobile thead th:nth-child(n),
+.skillpriotable thead th:nth-child(n) {
+  border: 2px solid #6464646c;
+  background: linear-gradient(
+    180deg,
+    #464646,
+    #202020,
+    #222222,
+    #101010,
+    #464646
+  );
+}
+.rawtableMobile thead th:nth-child(1),
+.eletableMobile thead th:nth-child(1),
+.skillpriotable thead th:nth-child(1) {
+  background-color: #ffffff00;
+  width: 30px;
+  display: hidden;
+}
+.skillpriotable thead th:nth-child(3) {
+  width: 60%;
+}
+.rawtableMobile tfoot th,
+.eletableMobile tfoot th,
+.skillpriotable tfoot th {
+  border: none;
+}
+.rawtableMobile td,
+.eletableMobile td,
+.skillpriotable td {
+  padding: 5px;
+  border: 2px solid #ffffff8f;
+}
+.rawtableMobile tbody tr,
+.eletableMobile tbody tr,
+.skillpriotable tbody tr {
+  border: 2px solid #ffffff8e;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.rawtableMobile tbody tr:nth-child(odd),
+.skillpriotable tr:nth-child(odd) {
+  background-color: #3d3d3d;
+}
+.rawtableMobile tbody tr:nth-child(even),
+.skillpriotable tr:nth-child(even) {
+  background-color: #757575;
+}
+.eletableMobile tbody tr:nth-child(1) {
+  background-color: #f3171783;
+}
+.eletableMobile tbody tr:nth-child(2) {
+  background-color: #290b9483;
+}
+.eletableMobile tbody tr:nth-child(3) {
+  background-color: #8a8a0b83;
+}
+.eletableMobile tbody tr:nth-child(4) {
+  background-color: #215c5c83;
+}
+.eletableMobile tbody tr:nth-child(5) {
+  background-color: #48096d83;
+}
+.inlineimg {
+  width: 5vw;
+  min-width: 40px;
+  margin: 10px;
+}
+.EleStatusImg {
+  width: 8vw;
+  height: 8vw;
+  max-width: 40px;
+  max-height: 40px;
+}
+.best {
+  background-color: #3e9249;
+}
+.good {
+  background-color: #76a063;
+}
+.bad {
+  background-color: #9e4949;
+}
+.redscroll {
+  color: #ff0000;
+}
+.bluescroll {
+  color: #7777fa;
+}
+.gray {
+  background-color: #757575;
+}
+.dark {
+  background-color: #3d3d3d;
+}
+.rawtable thead th:nth-child(1),
+.eletable thead th:nth-child(1) {
+  max-width: 10px;
+}
+.rawtable thead th:nth-child(n),
+.eletable thead th:nth-child(n),
+.switchskilltable thead th:nth-child(n),
+.skillpriotable thead th:nth-child(n) {
+  border: 2px solid #6464646c;
+  background: linear-gradient(
+    180deg,
+    #333333,
+    #202020,
+    #222222,
+    #101010,
+    #111111,
+    #010101,
+    #000000
+  );
+}
+.rawtable td,
+.eletable td,
+.switchskilltable td,
+.skillpriotable td {
+  padding: 5px;
+  border: 2px solid #ffffff8f;
+}
+.rawtable tbody tr,
+.eletable tbody tr,
+.switchskilltable tbody tr,
+.skillpriotable tbody tr {
+  border: 2px solid #ffffff8e;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.rawtable tfoot th,
+.eletable tfoot th,
+.switchskilltable tfoot th,
+.skillpriotable tfoot th {
+  border: none;
+}
+.rawtable tbody tr:nth-child(odd),
+.switchskilltable tbody tr:nth-child(odd),
+.skillpriotable tbody tr:nth-child(odd) {
+  background-color: #3d3d3d;
+}
+.rawtable tbody tr:nth-child(even),
+.switchskilltable tbody tr:nth-child(even),
+.skillpriotable tbody tr:nth-child(even) {
+  background-color: #757575;
+}
+.eletable tbody tr:nth-child(1) {
+  background-color: #f3171783;
+}
+.eletable tbody tr:nth-child(2) {
+  background-color: #290b9483;
+}
+.eletable tbody tr:nth-child(3) {
+  background-color: #8a8a0b83;
+}
+.eletable tbody tr:nth-child(4) {
+  background-color: #215c5c83;
+}
+.eletable tbody tr:nth-child(5) {
+  background-color: #48096d83;
+}
+.switchskilltable thead th:nth-child(1) {
+  min-width: 30px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background: linear-gradient(
+    50deg,
+    #423800,
+    #000000,
+    #000000,
+    #000000,
+    #4d4e00
+  );
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 5px;
+  border: solid;
+  border-color: #757717;
+  position: absolute;
+  bottom: 4vh; /*90%*/
+  left: 0;
+} /*removed*/
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation: flicker 10s infinite;
+  border-bottom: 2px solid black;
+}
+/*VVVVVVV yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
+.tooltiptext:before,
+.tooltiptext:after {
+  content: "";
+}
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/*^^^^^^^^ yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
+.CollL2Page {
+  text-align: center;
+}
+.CollL2Page {
+  border: 2px solid rgba(255, 255, 255, 0.274);
+  text-align: center;
+  background-color: #33333300;
+  color: #f3f3f3;
+}
+.CollL2Page .CollHeading {
+  display: inline-block;
+  margin-left: 0;
+}
+/*.CollL2Page {
+    border: 2px solid white;
+    border-radius: 5%;
+    text-align: center;
+    background-color: #333333;
+    color: #f3f3f3;}*/
+::-webkit-scrollbar {
+  display: none;
+}
+.sidebar li {
+  text-align: center;
+}
+.sidebarbutton {
   text-align: center;
   color: #f3f3f3;
   cursor: pointer;
   transition: 0.3s ease-in;
-  max-width: 10vw;
-  background-color: #313030;}
-.LinksHeader::before {
-  content: ' ';}
-.toggle:checked+.LinksHeader+.collapsible-contentLinks {
-  max-height: 1000vh;
-  max-width: 80vw;}
-.LinksHeader-contentLinks {
-  max-height: 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  height: 10vh;
+  width: 10vw;
+} /*    width: 3.4vw; height: 4vw; min-height: 80px; min-width: 70px;}*/
+.sidebarbutton::before {
+  display: hidden;
+}
+.toggle:checked + .sidebarbutton + .collapsible-contentSidebar {
+  max-height: 100vh;
+  max-width: 100vw;
+  top: 0;
+  transform: translateX(-150%);
+}
+/*.toggle:checked+.sidebarbutton+.collapsible-contentSidebar {
+  max-height: 100vh;
+  left:0;
+  top:0;
+  transform: translateX(-100%);}  */
+.collapsible-contentSidebar {
+  top: 0;
+  overflow: scroll;
   text-align: center;
   transition: 0.2s;
-  color: #333232;}
-.SetLinksContainer{
-  clear:both;}
-.BuildParagraph {
-  margin-left: 10vw;
-  margin-right: 10vw;}
-.switchskilltable, .rawtable, .eletable {display: none;}
-.rawtableMobile, .eletableMobile, .skillpriotable {
-  table-layout: auto;
-  text-align: center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;}
-.rawtableMobile thead th:nth-child(n), .eletableMobile thead th:nth-child(n), .skillpriotable thead th:nth-child(n) {border: 2px solid #6464646c; background: linear-gradient(180deg, #464646, #202020, #222222, #101010, #464646);}
-.rawtableMobile thead th:nth-child(1), .eletableMobile thead th:nth-child(1), .skillpriotable thead th:nth-child(1) {background-color: #ffffff00; width: 40px; display:hidden;}
-.skillpriotable thead th:nth-child(3){width:60%;}
-.rawtableMobile tfoot th, .eletableMobile tfoot th, .skillpriotable tfoot th {border:none;}
-.rawtableMobile td, .eletableMobile td, .skillpriotable td {padding: 5px; border: 2px solid #ffffff8f;}
-.rawtableMobile tbody tr, .eletableMobile tbody tr, .skillpriotable tbody tr {border: 2px solid #ffffff8e; text-shadow: 2px 2px 2px rgb(0, 0, 0);}
-.rawtableMobile tbody tr:nth-child(odd), .skillpriotable tr:nth-child(odd) {background-color: #3d3d3d;}
-.rawtableMobile tbody tr:nth-child(even), .skillpriotable tr:nth-child(even) {background-color: #757575;}
-.eletableMobile tbody tr:nth-child(1) {background-color: #f3171783;}
-.eletableMobile tbody tr:nth-child(2) {background-color: #290b9483;}
-.eletableMobile tbody tr:nth-child(3) {background-color: #8a8a0b83;}
-.eletableMobile tbody tr:nth-child(4) {background-color: #215c5c83;}
-.eletableMobile tbody tr:nth-child(5) {background-color: #48096d83;}
-.inlineimg {width: 5vw;}
-.EleStatusImg {width: 8vw; height: 8vw; max-width: 40px; max-height: 40px;}
-.best {background-color: #3e9249;}
-.good {background-color: #76a063;}
-.bad {background-color: #9e4949;}
-.redscroll {color: #ff0000;}
-.bluescroll {color: #7777fa;}
-.tooltip {
-  position: relative;
-  display: inline-block;}
-.tooltip .tooltiptext {
-    visibility: hidden;
-    background: linear-gradient(50deg, #423800, #000000, #000000, #000000, #4d4e00);
-    color: #f3f3f3;
-    text-align: center;
-    border-radius: 5px;
-    border: solid;
-    border-color:#757717;
-    position: absolute;
-    bottom: 4vh;
-    left: 0;}
-.tooltip:hover .tooltiptext {visibility: visible;animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    animation: flicker 10s infinite;
-border-bottom: 2px solid black;}
-/*yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
-.tooltiptext:before, .tooltiptext:after {
-    content: '';}
-@keyframes steam {
-    0% {background-position: 0 0;}
-    50% {background-position: 400% 0;}
-    100% {background-position: 0 0;}}
-/*yoinked from https://www.sliderrevolution.com/resources/css-border-animation/ - by Nick*/
-.CollL2Page {text-align: center;}
-::-webkit-scrollbar {display: none;}
-.sidebarbutton {
-    text-decoration: underline;
-    text-align: center;
-    color: #f3f3f3;
-    cursor: pointer;
-    transition: 0.3s ease-in;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    z-index: 10;
-    height: 10vh;
-    width: 10vw;}
-.sidebarbutton::before {display: hidden;}
-.toggle:checked+.sidebarbutton+.collapsible-contentSidebar {
-    max-height: 100vh;
-    max-width: 100vw;
-    top:0;
-    transform: translateX(-150%);}  
-.collapsible-contentSidebar {
-    top:0;
-    overflow:scroll;
-    text-align: center;
-    transition: 0.2s;
-    height: 100vh;
-    color: #f3f3f3;
-    position: fixed;
-    background-color: rgb(32, 47, 51);
-    border: 2px solid white;
-    border-radius: 3%;
-    z-index: 5;}  
-.burger {width: 10vh; height: 10vh;}
+  height: 100vh;
+  color: #f3f3f3;
+  position: fixed;
+  background-color: rgb(33, 33, 33);
+  border: 2px solid white;
+  border-radius: 3%;
+  z-index: 5;
+}
+.burger {
+  width: 10vh;
+  height: 10vh;
+} /*    .burger {width: 3.4vw; height: 4vw; min-height: 80px; min-width: 70px;}*/
 .collapsible-contentSidebar1 {
-    max-height: 0px;
-    overflow: hidden;
-    text-align: center;
-    transition: 0.2s;
-    background-color: rgb(32, 47, 51);
-    z-index: -20;
-    color: #f3f3f3;
-    width: 100%;}
-.toggle:checked+.collapsibleSidebar+.collapsible-contentSidebar1 {
-    max-height: 150vh;
-    max-width: 100%;
-    margin: 0 auto;}
+  max-height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s;
+  background-color: rgb(33, 33, 33);
+  z-index: -20;
+  color: #f3f3f3;
+  width: 90vw;
+}
+.toggle:checked + .collapsibleSidebar + .collapsible-contentSidebar1 {
+  max-height: 250vh;
+  max-width: 100%;
+  margin: 0 auto;
+}
 .collapsibleSidebar {
-    text-decoration: underline;
-    text-align: center;
-    color: #f3f3f3;
-    cursor: pointer;
-    width: 80vw;
-    transition: 0.5s ease-in;
-    height: 100vh;}
-.sidebar {width: 80vw;}
-.MainPagesBurger {font-size: 1.7rem;}
-.collapsible-contentSidebar1 a:link, a:visited {
-    color: #f3f3f3;
-    padding-left:1vw ;
-    padding-right: 1vw;
-    border-style: dashed;
-    background-color: #333333;
-    max-width: 728px;
-    text-align: center;
-    font-size: 1.2rem;}
+  text-decoration: underline;
+  text-align: center;
+  color: #f3f3f3;
+  cursor: pointer;
+  width: 80vw;
+  transition: 0.5s ease-in;
+  height: 100vh;
+}
+.sidebar {
+  width: 80vw;
+}
+.MainPagesBurger {
+  font-size: 1.7rem;
+}
+.collapsible-contentSidebar1 a:link,
+a:visited {
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .collapsible-contentSidebar1 a:active {
-    color: #444;
-    border: 2px green;
-    background-color: #444;
-    font-size: 1.2rem;}
-.Side_Img {
-    width: 25vw;
-    height: 25vw;}
+  color: #444;
+  border: 2px green;
+  background-color: #444;
+  font-size: 1.2rem;
+}
+.Side_Logo {
+  width: 50vw;
+}
+.sidebar .WeaponIcon {
+  min-height: 48px;
+  min-width: 48px;
+  height: 3vw;
+  width: 3vw;
+  margin: 10px;
+}
 .collapsible-contentToC {
-    overflow: hidden;
-    text-align: center;
-    transition: 0.2s;
-    color: #f3f3f3;}
+  transition: 0.3s ease-in;
+}
 .ToCHeader {
-    text-decoration: underline;
-    text-align: center;
-    color: #f3f3f3;
-    cursor: pointer;
-    transition: 0.3s ease-in;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 6vw;
-    width: 6vw; min-width: 60px; min-height: 60px;}
-.ToCHeader::before {display: hidden;}
-.toggle:checked+.ToCHeader+.collapsible-contentToC {
-    max-height: 100vh;
-    transform: translateY(-100%);}
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 8vw;
+  width: 8vw;
+}
+.ToCHeader::before {
+  display: hidden;
+}
+.toggle:checked + .ToCHeader + .collapsible-contentToC {
+  max-height: 100vh;
+  transform: translateY(-100%);
+}
 .CollToc {
-    left: 0;
-    top: 0;
-    width: 61vw; min-width: 255px;
-    position:fixed;
-    margin-left: 60px;
-    height: 1vh;
-    z-index: 2;}
-.ToCHeader-contentToC {
-    height: 100vh;
-    overflow: hidden;
-    transition: 0.2s;
-    background-color: rgb(92, 90, 90);
-    color: #f3f3f3;}
-.Toc_Img {width: 6vw; height: 6vw; min-width: 60px; min-height: 60px;}
+  height: 1vh;
+  left: 0;
+  top: 0;
+  width: 61vw;
+  min-width: 255px;
+  position: fixed;
+  margin-left: 20vw;
+  z-index: 2;
+}
+.Toc_Img {
+  width: 20vw;
+  height: 20vw;
+  max-width: 90px;
+  max-height: 90px;
+}
 .ColledToc {
-    left: 0;
-    width: 60vw; min-width: 250px;
-    border: 2px solid gold;
-    background: linear-gradient(60deg, rgba(92, 92, 92, 0.95), rgb(84, 2, 117, 0.95));}
-.ColledToc a:link, a:visited {
-    color: #f3f3f3;
-    padding-left:1vw ;
-    padding-right: 1vw;
-    border-style: dashed;
-    border-color: #464646;
-    text-align: center;
-    max-width: 728px;
-    text-align: center;
-    font-size: 1.2rem;
-    background: linear-gradient(60deg, rgba(36, 2, 70, 0.993), rgb(0, 0, 0));}
-#endgame, #prog, #guide {display: none;}
-#endgame, .endgameButton {
-    background: linear-gradient(200deg, rgba(189, 65, 73, 0.699), rgba(255, 211, 99, 0.705) );
-    width: 40vw;
-    margin: auto;
-    outline: 2px solid gray;}
-#prog, .progButton {
-    background: linear-gradient(20deg, rgb(140, 174, 90), rgb(103, 100, 215) );
-    width: 40vw;
-    margin: auto;
-    outline: 2px solid gray;}
-#guide, .guideButton {
-    background-image: linear-gradient(to right top, #000000, #31262f, #514b66, #5979a3, #43add8, #33b3d3, #2eb8cb, #37bcc1, #399295, #356b6c, #2c4546, #202323);
-    width: 40vw;
-    margin: auto;
-    outline: 2px solid gray;}
+  left: 0;
+  width: 60vw;
+  min-width: 250px;
+  border: 2px solid gold;
+  background-color: rgb(53, 52, 52);
+  text-align: left;
+}
+.ColledToc a:link,
+a:visited {
+  background-color: rgba(0, 0, 0, 0.233);
+}
+#endgame,
+#prog,
+#guide {
+  display: none;
+}
+#endgame,
+.endgameButton {
+  width: 40vw;
+  margin: auto;
+  outline: 2px solid gray;
+  text-align: center;
+}
+#prog,
+.progButton {
+  background: linear-gradient(20deg, rgb(140, 174, 90), rgb(103, 100, 215));
+  width: 40vw;
+  margin: auto;
+  outline: 2px solid gray;
+  text-align: center;
+}
+#guide,
+.guideButton {
+  background-image: linear-gradient(
+    to right top,
+    #000000,
+    #31262f,
+    #514b66,
+    #5979a3,
+    #43add8,
+    #33b3d3,
+    #2eb8cb,
+    #37bcc1,
+    #399295,
+    #356b6c,
+    #2c4546,
+    #202323
+  );
+  width: 40vw;
+  margin: auto;
+  outline: 2px solid gray;
+  text-align: center;
+}
 input[id="showendgame"]:checked ~ #endgame,
 input[id="showprog"]:checked ~ #prog,
 input[id="showguide"]:checked ~ #guide {
-    display: block;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 1s;}
+  display: block;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  margin: auto;
+  border: 2px solid gray;
+  margin-top: 10px;
+  width: 90vw;
+}
 input[id="showendgame"]:checked ~ .radiotext1,
 input[id="showguide"]:checked ~ .radiotext2,
 input[id="showprog"]:checked ~ .radiotext3 {
-    border: 4px solid;
-    animation: flicker 4s infinite;
-    background-color: #000000;}
+  border: 4px solid;
+  animation: flicker 4s infinite;
+  background-color: #000000;
+}
 @keyframes flicker {
-    0% {border-color: rgba(179, 252, 255, 0.3);
-    border-bottom-color: white;}
-    50% {border-color: rgba(179, 252, 255, 1);
-    border-bottom-color:white;}
-    100% {border-color: rgba(179, 252, 255, 0.3);
-    border-bottom-color: white;}}
-.radiobutton {display: none;}
-.radiotext1, .radiotext2, .radiotext3 {
-    margin-left: 1vw;
-    margin-right: 1vw;
-    width: 4vw;
-    height: 2vh;
-    cursor: pointer;
-    border: 2px solid white;
-    background-color: #333333;}
+  0% {
+    border-color: rgba(179, 252, 255, 0.3);
+    border-bottom-color: white;
+  }
+  50% {
+    border-color: rgba(179, 252, 255, 1);
+    border-bottom-color: white;
+  }
+  100% {
+    border-color: rgba(179, 252, 255, 0.3);
+    border-bottom-color: white;
+  }
+}
+.radiobutton {
+  display: none;
+}
+.radiotext1,
+.radiotext2,
+.radiotext3 {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 4vw;
+  height: 2vh;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: #333333;
+}
+.RadioContainer {
+  text-align: center;
+}
+.PeopleImg {
+  width: 7vw;
+}
+.PeopleTable {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 80vw;
+}
+.PeopleTable tbody tr,
+.PeopleTableSmall tbody tr {
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+.PeopleTableSmall {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 50vw;
+}
+.SmallImg {
+  width: 3vw;
+}
 .Level2Paragraph {
-    text-align: left;}
-.Patchnotes {width: 50vw;}
-.spaceholder {visibility: hidden; width: 1px; height: 10vh;}
-h2 {font-size: 3rem; text-shadow: 2px  1px 2px red, 0 0 1em blue, 0 0 0.2em blue;}
+  text-align: left;
+}
+.Patchnotes {
+  width: 50vw;
+}
 .gamememe {
+  z-index: -1;
   width: 85vw;
-  z-index: -1;}
+}
+.GuideImg {
+  width: 65vw;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.GuideCard,
+.GuideCardMobile {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 1vw;
+} /*margin 0 auto, display block*/
+.center {
+  text-align: center;
+  display: block;
+}
+.lefttext {
+  text-align: left;
+}
+.bluebg {
+  background-color: rgba(116, 116, 223, 0.432);
+}
+.redbg {
+  background-color: rgba(233, 107, 107, 0.425);
+}
+.spaceholder {
+  visibility: hidden;
+  width: 1px;
+  height: 10vh;
+}
+.L2Container {
+  text-align: center;
+  display: block;
+  width: 70vw;
+  margin: auto;
+}
+.l2guideimg {
+  width: 70vw;
+}
+.RiseMeme {
+  background-image: url(../src/assets/headers/AmazonPrimordialDarkVest.webp);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+} /*bg position 50% -1%*/
+.WorldMeme {
+  background-image: url(../src/assets/headers/slap_roof_of_fatty.webp);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+} /*bg position 50% 2%*/
+.endgameButton,
+.guideButton,
+.progButton {
+  width: 34vw;
+  display: inline-block;
+  text-align: center;
+  border: 4px solid rgba(231, 231, 231, 0.158);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  animation: flicker 5s infinite;
+}
+.endgameButton p,
+.guideButton p,
+.progButton p {
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  font-size: clamp(1rem, 1.5 rem, 2rem);
+  text-shadow: 3px 3px 3px rgb(34, 34, 34);
+}
+.endgameButton img,
+.guideButton img,
+.progButton img {
+  width: 5vw;
+  min-width: 50px;
+}
+
 .GuideParagraph {
   margin-left: 10vw;
-  margin-right: 10vw;}
+  margin-right: 10vw;
+}
 .GuideParagraphText {
-  text-align: center;}
-.GuideCard, .GuideCardMobile {
-  max-width: 100%;
-  padding: 1vw;}
-.GuideImg {width: 65vw; z-index: -1;}
+  text-align: center;
+}
 /*complete yt lite embed yoinked from: https://github.com/paulirish/lite-youtube-embed*/
 lite-youtube {
   background-color: #000;
@@ -351,59 +785,76 @@ lite-youtube {
   background-position: center center;
   background-size: cover;
   cursor: pointer;
-  max-width: 720px;}
+  max-width: 720px;
+}
 lite-youtube::before {
   content: attr(data-title);
   display: block;
   position: absolute;
   top: 0;
   /* Pixel-perfect port of YT's gradient PNG, using https://github.com/bluesmoon/pngtocss plus optimizations */
-  background-image: linear-gradient(180deg, rgb(0 0 0 / 67%) 0%, rgb(0 0 0 / 54%) 14%, rgb(0 0 0 / 15%) 54%, rgb(0 0 0 / 5%) 72%, rgb(0 0 0 / 0%) 94%);
+  background-image: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 67%) 0%,
+    rgb(0 0 0 / 54%) 14%,
+    rgb(0 0 0 / 15%) 54%,
+    rgb(0 0 0 / 5%) 72%,
+    rgb(0 0 0 / 0%) 94%
+  );
   height: 99px;
   width: 100%;
-  font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+  font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
   color: hsl(0deg 0% 93.33%);
-  text-shadow: 0 0 2px rgba(0,0,0,.5);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   font-size: 18px;
   padding: 25px 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
 lite-youtube:hover::before {
-  color: white;}
+  color: white;
+}
 /* responsive iframe with a 16:9 aspect ratio thanks https://css-tricks.com/responsive-iframes/ */
 lite-youtube::after {
   content: "";
   display: block;
-  padding-bottom: calc(100% / (16 / 9));}
+  padding-bottom: calc(100% / (16 / 9));
+}
 lite-youtube > iframe {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  border: 0;}
+  border: 0;
+}
 lite-youtube > .lty-playbtn {
   display: block;
   width: 100%;
   height: 100%;
   background: no-repeat center/68px 48px;
-  background-image: url('images/yt_button.webp');
+  background-image: url("../src/assets/icons/yt_button.webp");
   position: absolute;
   cursor: pointer;
   z-index: 1;
   filter: grayscale(100%);
-  transition: filter .1s cubic-bezier(0, 0, 0.2, 1);
-  border: 0;}
+  transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+  border: 0;
+}
 lite-youtube:hover > .lty-playbtn,
 lite-youtube .lty-playbtn:focus {
-  filter: none;}
-lite-youtube.lyt-activated {cursor: unset;}
+  filter: none;
+}
+lite-youtube.lyt-activated {
+  cursor: unset;
+}
 lite-youtube.lyt-activated::before,
 lite-youtube.lyt-activated > .lty-playbtn {
   opacity: 0;
-  pointer-events: none;}
+  pointer-events: none;
+}
 .lyt-visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -411,32 +862,460 @@ lite-youtube.lyt-activated > .lty-playbtn {
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;}
+  width: 1px;
+}
 /*complete yt lite embed yoinked from: https://github.com/paulirish/lite-youtube-embed*/
-.PeopleImg {width: 7vw;}
-.PeopleTable {
-text-align: left;
-margin-left: auto;
-margin-right: auto;
-border-collapse: collapse;
-width: 80vw;}
-.PeopleTable tbody tr, .PeopleTableSmall tbody tr {
-text-shadow: 3px 3px 3px rgb(0, 0, 0);}
-.PeopleTableSmall {
-  text-align: left;
+footer a:link {
+  color: #f3f3f3;
+}
+a:link:visited {
+  color: #f3f3f3;
+}
+a:link {
+  color: #f3f3f3;
+}
+#controls-dropdown {
+  width: 45vw;
+  border: outset 8px rgba(43, 43, 43, 0.288);
+  background-color: #333333;
+  color: #f3f3f3;
+}
+.BurgerWeaponTable {
+  display: block;
+  width: 89vw;
+  max-width: 500px;
+  border-collapse: separate;
+  border-spacing: 0.5vw;
+  background-color: #00000000;
   margin-left: auto;
   margin-right: auto;
-  border-collapse: collapse;
-  width: 50vw;}
-.SmallImg {width: 3vw;}
-.L2Container {text-align: center; display: block; width: 70vw; margin: auto;}
-.l2guideimg {width: 70vw;}
-.RiseMeme {background-image: url(images/AmazonPrimordialDarkVest.webp); background-repeat: no-repeat; background-size: 100vw;}
-.WorldMeme {background-image: url(images/slap_roof_of_fatty.webp); background-repeat: no-repeat; background-size: 100vw;}
-.endgameButton, .guideButton, .progButton {width: 34vw; display: inline-block; text-align: center; border: 4px solid rgba(231, 231, 231, 0.158); margin-left: 3vw; margin-right: 3vw; animation: flicker 5s infinite;}
-.endgameButton p, .guideButton p, .progButton p {margin-top: 0 auto; margin-bottom: 0 auto; font-size: clamp(1rem, 1.5 rem, 2rem); text-shadow: 3px 3px 3px rgb(34, 34, 34); ;}
-.endgameButton img, .guideButton img, .progButton img {width: 5vw; min-width: 50px;}
-li {list-style-type: none;}
-footer a:link {color: #f3f3f3;}
-.ImgButton {background: linear-gradient(45deg, #0000003d, #2727273d, rgba(0, 0, 0, 0.24)00, #4646462a,#00000060); border: outset 5px rgba(206, 204, 204, 0.5); min-width: 150px; display: inline-block; min-height: 20px; height: 3vw; width: 20vw; margin-top: 10px; margin-bottom: 10px;}
-a:link:visited {color: #f3f3f3;} a:link {color: #f3f3f3;}
+}
+.BurgerWeaponTable td {
+  background-color: #00000000;
+}
+.BurgerWeaponTableImg {
+  width: 17vw;
+  max-width: 100px;
+  background-color: #000;
+  margin: 0 auto;
+}
+#showWorldGS,
+#showRiseGS,
+#showWildsGS,
+#showWorldLS,
+#showRiseLS,
+#showWildsLS,
+#showWorldSnS,
+#showRiseSnS,
+#showWildsSnS,
+#showWorldDB,
+#showRiseDB,
+#showWildsDB,
+#showWorldHammer,
+#showRiseHammer,
+#showWildsHammer,
+#showWorldHorn,
+#showRiseHorn,
+#showWildsHorn,
+#showWorldLance,
+#showRiseLance,
+#showWildsLance,
+#showWorldGunlance,
+#showRiseGunlance,
+#showWildsGunlance,
+#showWorldSwaxe,
+#showRiseSwaxe,
+#showWildsSwaxe,
+#showWorldCB,
+#showRiseCB,
+#showWildsCB,
+#showWorldGlaive,
+#showRiseGlaive,
+#showWildsGlaive,
+#showWorldBow,
+#showRiseBow,
+#showWildsBow,
+#showWorldLBG,
+#showRiseLBG,
+#showWildsLBG,
+#showWorldHBG,
+#showRiseHBG,
+#showWildsHBG {
+  display: none;
+}
+#BurgerWorldGS,
+#BurgerWorldLS,
+#BurgerWorldSnS,
+#BurgerWorldDB,
+#BurgerWorldHammer,
+#BurgerWorldHorn,
+#BurgerWorldLance,
+#BurgerWorldGunlance,
+#BurgerWorldSwaxe,
+#BurgerWorldCB,
+#BurgerWorldGlaive,
+#BurgerWorldBow,
+#BurgerWorldLBG,
+#BurgerWorldHBG,
+#BurgerRiseGS,
+#BurgerRiseLS,
+#BurgerRiseSnS,
+#BurgerRiseDB,
+#BurgerRiseHammer,
+#BurgerRiseHorn,
+#BurgerRiseLance,
+#BurgerRiseGunlance,
+#BurgerRiseSwaxe,
+#BurgerRiseCB,
+#BurgerRiseGlaive,
+#BurgerRiseBow,
+#BurgerRiseLBG,
+#BurgerRiseHBG,
+#BurgerWildsGS,
+#BurgerWildsLS,
+#BurgerWildsSnS,
+#BurgerWildsDB,
+#BurgerWildsHammer,
+#BurgerWildsHorn,
+#BurgerWildsLance,
+#BurgerWildsGunlance,
+#BurgerWildsSwaxe,
+#BurgerWildsCB,
+#BurgerWildsGlaive,
+#BurgerWildsBow,
+#BurgerWildsLBG,
+#BurgerWildsHBG {
+  border: outset 8px rgba(43, 43, 43, 0.288);
+}
+input[id="WorldGS"]:checked ~ #showWorldGS,
+input[id="WorldLS"]:checked ~ #showWorldLS,
+input[id="WorldSnS"]:checked ~ #showWorldSnS,
+input[id="WorldDB"]:checked ~ #showWorldDB,
+input[id="WorldHammer"]:checked ~ #showWorldHammer,
+input[id="WorldHorn"]:checked ~ #showWorldHorn,
+input[id="WorldLance"]:checked ~ #showWorldLance,
+input[id="WorldGunlance"]:checked ~ #showWorldGunlance,
+input[id="WorldSwaxe"]:checked ~ #showWorldSwaxe,
+input[id="WorldCB"]:checked ~ #showWorldCB,
+input[id="WorldGlaive"]:checked ~ #showWorldGlaive,
+input[id="WorldBow"]:checked ~ #showWorldBow,
+input[id="WorldLBG"]:checked ~ #showWorldLBG,
+input[id="WorldHBG"]:checked ~ #showWorldHBG,
+input[id="RiseGS"]:checked ~ #showRiseGS,
+input[id="RiseLS"]:checked ~ #showRiseLS,
+input[id="RiseSnS"]:checked ~ #showRiseSnS,
+input[id="RiseDB"]:checked ~ #showRiseDB,
+input[id="RiseHammer"]:checked ~ #showRiseHammer,
+input[id="RiseHorn"]:checked ~ #showRiseHorn,
+input[id="RiseLance"]:checked ~ #showRiseLance,
+input[id="RiseGunlance"]:checked ~ #showRiseGunlance,
+input[id="RiseSwaxe"]:checked ~ #showRiseSwaxe,
+input[id="RiseCB"]:checked ~ #showRiseCB,
+input[id="RiseGlaive"]:checked ~ #showRiseGlaive,
+input[id="RiseBow"]:checked ~ #showRiseBow,
+input[id="RiseLBG"]:checked ~ #showRiseLBG,
+input[id="RiseHBG"]:checked ~ #showRiseHBG,
+input[id="WildsGS"]:checked ~ #showWildsGS,
+input[id="WildsLS"]:checked ~ #showWildsLS,
+input[id="WildsSnS"]:checked ~ #showWildsSnS,
+input[id="WildsDB"]:checked ~ #showWildsDB,
+input[id="WildsHammer"]:checked ~ #showWildsHammer,
+input[id="WildsHorn"]:checked ~ #showWildsHorn,
+input[id="WildsLance"]:checked ~ #showWildsLance,
+input[id="WildsGunlance"]:checked ~ #showWildsGunlance,
+input[id="WildsSwaxe"]:checked ~ #showWildsSwaxe,
+input[id="WildsCB"]:checked ~ #showWildsCB,
+input[id="WildsGlaive"]:checked ~ #showWildsGlaive,
+input[id="WildsBow"]:checked ~ #showWildsBow,
+input[id="WildsLBG"]:checked ~ #showWildsLBG,
+input[id="WildsHBG"]:checked ~ #showWildsHBG {
+  display: block;
+  margin: 0 auto;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  width: 89vw;
+  max-width: 500px;
+}
+#showWorldGS,
+#showRiseGS,
+#showWildsGS {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/greatsword.webp);
+}
+#showWorldLS,
+#showRiseLS,
+#showWildsLS {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/longsword.webp);
+}
+#showWorldSnS,
+#showRiseSnS,
+#showWildsSnS {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/sword_and_shield.webp);
+}
+#showWorldDB,
+#showRiseDB,
+#showWildsDB {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/dual_blades.webp);
+}
+#showWorldHammer,
+#showRiseHammer,
+#showWildsHammer {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/hammer.webp);
+}
+#showWorldHorn,
+#showRiseHorn,
+#showWildsHorn {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/hunting_horn.webp);
+}
+#showWorldLance,
+#showRiseLance,
+#showWildsLance {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/lance.webp);
+}
+#showWorldGunlance,
+#showRiseGunlance,
+#showWildsGunlance {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/gunlance.webp);
+}
+#showWorldSwaxe,
+#showRiseSwaxe,
+#showWildsSwaxe {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/switch_axe.webp);
+}
+#showWorldCB,
+#showRiseCB,
+#showWildsCB {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/charge_blade.webp);
+}
+#showWorldGlaive,
+#showRiseGlaive,
+#showWildsGlaive {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/insect_glaive.webp);
+}
+#showWorldBow,
+#showRiseBow,
+#showWildsBow {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/bow.webp);
+}
+#showWorldLBG,
+#showRiseLBG,
+#showWildsLBG {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/light_bowgun.webp);
+}
+#showWorldHBG,
+#showRiseHBG,
+#showWildsHBG {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url(../src/assets/weap_icons/heavy_bowgun.webp);
+}
+.CollSidebar {
+  text-align: center;
+  display: inline-block;
+  transition: all 0.25s ease-out;
+  color: #f3f3f3;
+  max-height: 0px;
+  overflow: hidden;
+}
+.SidebarHeading {
+  display: block;
+} /*text-decoration: underline; text-align: center; color: #f3f3f3; cursor: pointer; transition: 0.3s ease-in; display: inline-block; font-weight: bold; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; */
+.toggle:checked ~ .CollSidebar {
+  max-height: 300vh;
+}
+.SidebarHeading {
+  margin: 0 auto;
+}
+.NavbarWeapSelect h2 {
+  font-size: 2rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.GamePageLink,
+.GuideLink {
+  width: 50vw;
+  max-width: 494px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: black;
+}
+.ReturnToGameIcon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: inline-block;
+}
+.ReturnToGameImg {
+  width: 8vw;
+  height: 5.133vw;
+  min-width: 150px;
+  min-height: 97px;
+}
+.CollHeading .center {
+  border: 8px outset orange;
+  background-color: black;
+}
+.GamePageLink h2,
+.GuideLink h2 {
+  text-shadow: 6px 6px 6px #d1b34873, 1px 1px 1px #ffeccc77, 3px 3px 3px black;
+  color: #e3ca8fa9;
+}
+.world .GuideLink {
+  background-color: rgba(37, 123, 163, 0.411);
+  border: 3px outset rgba(37, 123, 163, 0.7);
+}
+.world .BurgerWeaponTableImg,
+.world .GamePageLink {
+  border: 5px outset rgba(37, 123, 163, 0.7);
+}
+.rise .GuideLink {
+  background-color: rgba(220, 20, 60, 0.2);
+  border: 3px outset rgba(160, 20, 60, 0.7);
+}
+.rise .BurgerWeaponTableImg,
+.rise .GamePageLink {
+  border: 8px outset rgba(160, 20, 60, 0.7);
+}
+.wilds .GuideLink {
+  background-color: #03b12018;
+  border: 3px outset #03b12044;
+}
+.wilds .GamePageLink {
+  border: 5px outset #03b12044;
+  transition: 1s;
+  background-color: black;
+}
+.wilds .BurgerWeaponTableImg {
+  border: outset 8px #03b12044;
+}
+.rise .CollHeading h3 {
+  border: outset 5px rgba(160, 20, 60, 0.15);
+}
+.rise .ColledToc {
+  background-color: rgba(53, 5, 19, 0.897);
+  border: 4px solid rgba(160, 20, 60, 0.315);
+}
+.rise .ColledToc a:link {
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  background: none;
+  background-color: rgba(0, 0, 0, 0.555);
+}
+.rise.progButton,
+.rise.endgameButton,
+.rise.guideButton {
+  background: none;
+  background-color: rgba(160, 20, 60, 0.39);
+}
+.world .IndexImg {
+  background-color: rgba(37, 123, 163, 0.5);
+}
+.rise .IndexImg {
+  background-color: rgba(160, 20, 60, 0.5);
+}
+.wilds .IndexImg {
+  background-color: #03b1206b;
+}
+.home h4 {
+  color: rgb(218, 218, 218);
+  text-shadow: 0px 0px 0px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0),
+    10px 10px 10px rgb(0, 0, 0);
+  text-align: center;
+  border: 3px solid rgba(128, 128, 128, 0.493);
+  border-top-left-radius: 3%;
+  border-bottom-right-radius: 20%;
+  width: 12vw;
+  background-color: rgba(128, 128, 128, 0.116);
+  margin: auto;
+}
+.endgameButton p,
+.guideButton p,
+.progButton p {
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  text-shadow: 3px 3px 3px rgb(34, 34, 34);
+  display: block;
+  text-align: center;
+}
+.Side_Link {
+  border: outset 5px rgba(206, 204, 204, 0.5);
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0.082);
+}
+.world .ImgButton {
+  background-color: rgba(37, 123, 163, 0.623);
+  border: outset 5px rgba(206, 204, 204, 0.5);
+  min-width: 150px;
+  display: inline-block;
+  width: 20vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.rise .ImgButton {
+  background-color: rgba(160, 20, 60, 0.623);
+  border: outset 5px rgba(206, 204, 204, 0.5);
+  min-width: 150px;
+  display: inline-block;
+  width: 20vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.wilds .ImgButton {
+  background-color: #30b1206b;
+  border: outset 5px rgba(206, 204, 204, 0.5);
+  min-width: 150px;
+  display: inline-block;
+  width: 20vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
